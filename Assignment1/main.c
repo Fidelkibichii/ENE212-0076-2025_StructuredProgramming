@@ -3,54 +3,17 @@
 
 int main()
 {
-    double num1, num2, result;
-    char sign;
+    double area;
+    double r;
+    const double pi =3.142;
 
-    printf("Enter first number: ");
-    scanf("%lf", &num1);
+    //Getting radius from user
+    printf("Enter radius: ");
+    scanf("%lf", &r);
 
-    printf("Enter a sign(+, -, *, /): ");
-    scanf(" %c", &sign);
-
-    printf("Enter second number: ");
-    scanf("%lf", &num2);
-
-    switch(sign)
-    {
-    case '+':
-        result = num1 + num2;
-        printf("Result =%.2lf\n", result);
-        break;
-
-    case '-':
-        result = num1 - num2;
-        printf("Result = %.2lf\n", result);
-        break;
-
-    case '*':
-        result = num1 * num2;
-        printf("Result = %.2lf\n", result);
-        break;
-
-    case '/':
-        if(num2 != 0)
-        {
-            result = num1 / num2;
-            printf("Result = %.2lf\n", result);
-        }
-        else
-        {
-            printf("Error: Cannot divide by zero.\n");
-        }
-        break;
-
-
-    default:
-        printf("Error: Invalid sign.\n");
-
-
-    }
-
+    //calculation and determination of area
+    area =pi*r*r;
+    printf("Area = %.2lf", area);
 
     return 0;
 }
